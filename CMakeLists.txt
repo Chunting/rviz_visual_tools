@@ -1,6 +1,15 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(rviz_visual_tools)
 
+# C++ 11
+add_definitions(-std=c++11)
+
+# Warnings
+add_definitions(-W -Wall -Wextra
+  -Wcast-qual -Wwrite-strings -Wunreachable-code -Wpointer-arith
+  -Winit-self -Wredundant-decls
+  -Wno-unused-parameter -Wno-unused-function)
+
 find_package(catkin REQUIRED COMPONENTS
   cmake_modules
   eigen_conversions
